@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* global styles */
+*{
+    box-sizing: border-box; /*los elementos respeten el tamano*/
+    margin: 0; /*enmedio (izquierda derecha)*/
+    padding: 0; /*espacio hacia los lados*/
+}
+
+img{
+    width: 100% /*ancho*/
+}
