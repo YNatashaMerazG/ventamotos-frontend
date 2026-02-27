@@ -1,10 +1,21 @@
 /* global styles */
-*{
-    box-sizing: border-box; /*los elementos respeten el tamano*/
-    margin: 0; /*enmedio (izquierda derecha)*/
-    padding: 0; /*espacio hacia los lados*/
+
+body {
+  margin: 0;
+  font-family: 
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background: #f4f6f8;
 }
 
-img{
-    width: 100% /*ancho*/
+html, body{
+  max-width: 100%;
+  overflow-x: hidden; /*Corta cualquier cosa que quiera salir a la derecha*/
+  margin: 0;
+  padding: 0;
 }

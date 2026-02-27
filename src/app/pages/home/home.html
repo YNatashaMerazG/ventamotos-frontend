@@ -1,1 +1,28 @@
-<p>home works!</p>
+<div class="carrusel">
+    <!--contenedor para las imagenes-->
+  <div 
+    class="carrusel-track"
+    [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+    <!--traslateX: mueve las imagenes horizontalmente-->
+
+    <!--*ngFor recorre el arreglo de imagenes-->
+    <img *ngFor="let image of imagenes" [src] = "image" class = "carrusel-imagenes">
+
+    </div>
+
+    <!--Boton anterior-->
+    <button
+    class="carrusel-btn prev" (click)="prev()">
+    ◀
+    </button>
+    <!--Boton siguiente-->
+    <button class="carrusel-btn next" (click)="next()">
+    ▶
+    </button>
+</div>
+
+<div class="letras-conjunto">
+        <h2>¿NO TE GUSTARÍA SER UNO DE ELLOS?</h2>
+        <p>Adquiere la moto de tus sueños con nosotros.</p>
+        <a routerLink="/productos" class="btn-catalogo">EXPLORA NUESTRO CATÁLOGO</a>
+</div>

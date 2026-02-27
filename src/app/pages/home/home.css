@@ -1,0 +1,93 @@
+/*Carrucel principal*/
+.carrusel{
+    position: relative;
+    width: 100%;
+    height: 60vh; /*vh para que se ajuste mejor*/
+    background-color: #20232A;
+    margin: 0 auto;
+    overflow: hidden; /*oculta las imagenes fuera*/
+    border-radius: 0;
+}
+
+.carrusel-track{
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.carrusel-imagenes{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*ajusta la foto para que se vea sin recortar*/
+    flex-shrink: 0;
+}
+
+/*BOTONES*/
+.carrusel-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgba(32, 35, 42, 0.6); /* Color oscuro con 60% de transparencia */
+    backdrop-filter: blur(5px); /* desenfoque al fondo */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Un borde sutil para que resalte sobre la foto */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/*boton izquierda*/
+.prev{
+    left: 10px;
+}
+
+/*boton derecha*/
+.next{
+    right: 10px;
+}
+
+.carrusel-btn:hover{
+    background: #1e88e5;
+}
+
+.letras-conjunto{
+    padding: 40px 20px;
+    text-align: center;
+    color: #20232A;
+    width: 100%;
+    background-color: white;
+}
+
+.letras-conjunto h2{
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.letras-conjunto p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn-catalogo{
+    background-color: #1e88e5;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-catalogo:hover{
+    background-color: #1565c0;
+    box-shadow: 0px 4px 15px rgba(30, 136, 229, 0.4);
+}

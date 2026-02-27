@@ -1,0 +1,76 @@
+/*contemedor principal*/
+.header{
+    background: #20232A; /*color de fondo*/
+    border-bottom: 2px solid #0e0e0e; /*linea inferior*/
+    position: sticky; /*se queda fijo arriba*/
+    top:0; /*distancia entre elemento y borde superior*/
+    z-index: 1000; /*profundidad*/
+}
+
+/*contenedor interno*/
+.container{
+    max-width: 1200px; /*ancho maximo*/
+    margin:auto; /*centrado*/
+    padding: 0 20px; /*espacio hacia los lados*/
+
+    height: 70px; /*alto*/
+
+    display: flex; /*se alinien horizontalmente*/
+    align-items: center; /*centra vertical*/
+    justify-content: space-between; /*separa izquierda y derecha*/
+}
+
+/*contenedor del logo*/
+.logo-container{
+    display: flex; /*Alinear horizontalmente*/
+    align-items: center; /*centra vertial*/
+    gap: 10px; /*espacio ente imagen y texto*/
+}
+/*imagen logo*/
+.logo-img{
+    height: 80px; /*tamano*/
+}
+/*texto logo*/
+.logo-text{
+    font-size: 30px; /*tamano letra (logo)*/
+    font-weight: bold; /*grosor de la letra*/
+    color: white; /*color*/
+}
+/*navegacion*/
+.nav{
+    display: flex;
+    gap: 30px; /*espacio entre cada titulo*/
+}
+/*links*/
+.nav a{
+    text-decoration: none; /*quitar la linea de defecto*/
+    color: whitesmoke;
+    font-weight: 500; /*grosor*/
+    transition: 0.3s; /*tiempo que tarda en cambiar el color*/
+    font-size: 20px;
+}
+
+/*efecto al poner el mouse*/
+.nav a:hover{
+    color: #1e88e5;
+}
+
+.active{
+    color: #1e88e5; /*color cuando seleccionas el texto*/
+    border-bottom: 2px solid #1e88e5; /*linea abajo del texto*/
+    padding-bottom: 4px; /*espacio entre texto y linea*/
+}
+
+.login-btn{
+    background-color: #1e88e5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-btn:hover{
+    background: #1565c0;
+}

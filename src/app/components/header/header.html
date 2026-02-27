@@ -1,1 +1,21 @@
-<p>header works!</p>
+<header class="header"> <!--Contenedor header-->
+    <div class="container"> <!--contenedor interno-->
+        <div class="logo-container"><!--contenedor de logo-->
+            <img src="/icono-sinfondo.png" class="logo-img" alt="Logo LMM"> 
+            <!--img src=ubicacion class=para modificar alt:texto-->
+            <span class="logo-text">LMM</span> <!--Texto logo-->
+        </div>
+    
+    <nav class="nav"> <!--routerLinkActive: saber en que pagina esta el usuario-->
+        <!--routerLink: cambia la pagina sin actualizar-->
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+        <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+        <a routerLink="/productos" routerLinkActive="active">Productos</a>
+        <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
+    </nav>
+    <!--Boton admin-->
+    <a routerLink="/login" class="login-btn"> 
+        Administrador
+    </a>
+    </div>
+</header>
