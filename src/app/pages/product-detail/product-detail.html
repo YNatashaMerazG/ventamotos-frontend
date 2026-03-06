@@ -1,0 +1,35 @@
+<div class="detalles-carrusel" *ngIf="moto">
+    <div class="carrusel">
+        <button class="btn-nav izquierda" (click)="anteriorImagen()">
+            ❮
+        </button>
+
+        <img
+            class="imagen-principal"
+            *ngIf="moto.imagenes?.length"
+            [src]="moto.imagenes[imagenActualIndex]"
+        />    
+
+        <button class="btn-nav derecha" (click)="siguienteImagen()">
+            ❯
+        </button>
+    </div>    
+
+    <div class="info">
+        <h2> {{ moto.marca }} {{ moto.modelo }}</h2>
+
+        <p class="precio"> 
+            {{ moto.precioVenta | currency:'USD':'symbol':'1.0-0'}}
+        </p>
+
+        <p>
+            {{ moto.anio }} · {{ moto.cilindrada }}cc · {{ moto.color }} · {{ moto.facturaOriginal }} · {{ moto.kilometraje }} Km
+        </p>
+
+        <!--<button class="btn-favoritos">
+            Favoritos
+        </button>-->
+
+    </div>
+</div>
+

@@ -5,14 +5,16 @@ import { Home } from './pages/home/home';
 import { About } from './pages/about/about';
 import { Products } from './pages/products/products';
 import { Contact } from './pages/contact/contact';
+import { ProductDetailsComponent } from './pages/product-detail/product-detail';
 
 //Comenzamos a llamar a los componentes
 export const routes: Routes = [
     //path: 'ruta', componente: donde vamos
     {path: '', component: Home},
-    {path: 'nosotros', component: About},
+    //{path: 'nosotros', component: About},
     {path: 'productos', component: Products},
-    {path: 'contacto', component: Contact},
+   //{path: 'contacto', component: Contact},
+   {path: 'producto/:id', component: ProductDetailsComponent},
     //ruta no existente
     {path: '**', redirectTo: ''} // redirectTo: componenteRaiz
 ];

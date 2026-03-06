@@ -1,1 +1,98 @@
-<p>products works!</p>
+
+<div class="layout">
+    <aside class="filtros"> <!--aside: marcar contenido que esta aun lado-->
+
+        <div class="filtros-header">
+        
+            <h3>Filtros</h3>
+            <!--filtro por marca-->
+            <label>Marca</label>
+            <select [(ngModel)] = "filtros.marca" (change) = "aplicarfiltros()">
+                <option value=""> Todas </option>
+                <option *ngFor="let marca of marcasDisponibles" [value]="marca">
+                {{marca}}
+            </option>
+            </select>
+
+            <!--filtro de cilindrada-->
+            <label>Cilindrada minima</label>
+            <input
+                type="number"
+                min="0"
+                [(ngModel)]="filtros.ccMin"
+                (input)="aplicarfiltros()"
+            >
+
+            <!--filtro precio max-->
+            <label>Precio Maximo</label>
+            <input
+                type="number"
+                min="0"
+                [(ngModel)]="filtros.precioMax"
+                (input)="aplicarfiltros()"
+            >
+
+            <!--Anio-->
+            <label>Año</label>
+            <input
+                type="number"
+                min="2000"
+                [(ngModel)]="filtros.anio"
+                (input)="aplicarfiltros()"
+            >
+
+            <!--boton limpiar filtros-->
+            <button
+                class="btn-limpiar"
+                (click)="limpiarFiltros()">
+                Limpiar
+            </button>
+        </div>
+    </aside>
+
+    <!--Contenido principal-->
+    <main class="contenido">
+        <!--Buscador-->
+        <div class="buscar-container"> 
+            <input
+                type="text"
+                placeholder="Buscar marca o modelo..."
+                [(ngModel)] = "busqueda"
+                (input)="aplicarfiltros()"
+                class="buscador"
+            >
+        </div>
+    
+        <!--Cartas motos-->
+        <div class="productos-container"> <!--contenedor principal-->
+
+            <div class="producto-card" *ngFor="let moto of motosFiltradas"> <!--ngFor: for para la creacion de los rectangulos, recorre el arreglo-->
+
+                <img [src] = "moto.imagen" class="producto-imagen"> <!--Usar -->
+
+                <div class="producto-info"> <!--contenedor con la informacion-->
+
+                    <h3>{{ moto.marca }} {{ moto.modelo}}</h3> <!--Nombre de la moto y modelo-->
+
+                    <p class="producto-detalles">
+                        {{ moto.anio }} · {{ moto.cilindrada }}cc · {{ moto.color }}
+                    </p>
+
+                    <p class="producto-precio">
+                        {{ moto.precioVenta | currency:'USD':'symbol':'1.0-0' }}
+                    </p>
+
+                    <button class="btn-ver" [routerLink]="['/producto', moto.id]">
+                        Ver esta moto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+
+
+

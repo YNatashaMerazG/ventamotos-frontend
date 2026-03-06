@@ -1,0 +1,162 @@
+.layout {
+  display: flex; /* Modo lado-lado: sidebar izquierda + contenido derecha */
+  gap:30px; /*Separacion filtros y motos*/
+  max-width: 1400px;
+  margin: 0 auto; /*Centra horizontalmente*/
+  padding: 20px; /*Espacio al rededor*/
+  align-items: flex-start; /*Evita que el color de los filtros se expanda*/
+}
+
+.filtros{
+    width: 280px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05); /*sombras*/
+    position: sticky; /*Los filtros te siguen*/
+    top: 20px; /*distancia del techo al bajar*/
+}
+
+.btn-limpiar{
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    cursor: pointer;
+    transform: 0.3s;
+}
+
+
+
+.filtros label{
+    display:block; /*texto ocupa toda la linea*/
+    font-weight: 600;
+    margin-top: 15px; /*espacio arriba de cada label*/
+    margin-bottom: 8px; /*espacio abajo */
+    color: #333;
+}
+
+.filtros select, .filtros input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd; /*borde color gris claro*/
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    transition: 0.3s;
+      appearance: none;        /* elimina estilo nativo */
+    -webkit-appearance: none; /* Safari */
+     -moz-appearance: none;    /* Firefox */
+     box-sizing: border-box;
+     font-family: inherit;
+     
+}
+
+.filtros select:focus,
+.filtros input:focus {
+
+  outline: none;
+  border-color: black;
+  background-color: white;
+
+}
+
+/* Quitar flechas en Chrome, Edge, Safari */
+.filtros input[type="number"]::-webkit-inner-spin-button,
+.filtros input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar flechas en Firefox */
+.filtros input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+.producto-imagen {
+  width: 100%; /*anchura*/
+  height: 300px;
+  object-fit: contain; /*la imagen sea visible*/
+  /*cover: llena todo el espacio*/
+  background-color: #f8f9fa;
+  padding: 10px; /*espacio*/
+}
+
+.producto-info {
+  padding: 15px;
+}
+
+.producto-precio {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.btn-ver {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+
+  width: 250px;
+  padding: 20px;
+  background: #f4f4f4;
+
+}
+
+
+/* CONTENIDO */
+.contenido {
+
+  flex: 1;
+  padding: 20px;
+
+}
+
+
+/* BUSCADOR */
+.buscador {
+
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+}
+
+.precio {
+
+  font-weight: bold;
+
+  font-size: 18px;
+
+}
